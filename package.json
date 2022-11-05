@@ -21,7 +21,6 @@
   },
   "homepage": "https://github.com/comp426-2022-fall/a03-kmccabe1#readme",
   "dependencies": {
-    "minimist": "^1.2.7",
-    "roll-dice": "^0.2.1"
+    "minimist": "^1.2.7"
   }
 }
