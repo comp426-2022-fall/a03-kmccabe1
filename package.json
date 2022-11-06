@@ -5,7 +5,7 @@
   "main": "./lib/roll.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "roll-dice --sides=10 --dice=2 --rolls=3"
   },
   "bin": {
     "roll-dice": "./bin/cli.js"
