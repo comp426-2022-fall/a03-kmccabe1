@@ -7,36 +7,27 @@ import { roll } from '../lib/roll.js'
 const args = minimist(process.argv.slice(2))
 // Set default values, but update if args given
 let sides = 6
-if (args.sides > 0) {
-	if (args.sides % 1 != 0) {
-		console.log("Invalid sides value.")
-		process.exit(1)
-	}
+// Update sides if positive integer is given
+if (args.sides > 0 && (args.sides % 1 == 0)) {
 	sides = args.sides
 }else {
-	console.log("Sides must be positive.")
+	console.log("Invalid sides argument.")
 	process.exit(1)
 }
 let dice = 2
-if (args.dice > 0) {
-	if (args.sides % 1 != 0) {
-		console.log("Invalid dice value.")
-		process.exit(1)
-	}
+// Update dice if positive integer is given
+if (args.dice > 0 && (args.dice % 1 == 0)) {
 	dice = args.dice
 }else {
-	console.log("Dice must be positive.")
+	console.log("Invalid dice argument.")
 	process.exit(1)
 }
 let rolls = 1
-if (args.rolls > 0) {
-	if (args.sides % 1 != 0) {
-		console.log("Invalid rolls value.")
-		process.exit(1)
-	}
+// Update rolls if positive integer is given
+if (args.rolls > 0 && (args.rolls % 1 == 0)) {
 	rolls = args.rolls
 }else {
-	console.log("Rolls must be positive.")
+	console.log("Invalid rolls argument.")
 	process.exit(1)
 }
 
